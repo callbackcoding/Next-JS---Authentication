@@ -7,7 +7,7 @@ function Home() {
   const router = useRouter();
   const handleSignIn = () => {
     console.log("Sign In Clicked");
-    signIn("google", { callbackUrl: "http://localhost:3000/dashboard" });
+    signIn("google", { callbackUrl: process.env.NEXT_PUBLIC_AUTH_SIGNIN_REDIRECT_URL });
     // router.push("/dashboard");
   };
   return (

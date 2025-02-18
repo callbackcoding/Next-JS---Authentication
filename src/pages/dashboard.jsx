@@ -22,7 +22,7 @@ function Dashboard() {
 
   const handleSignOut = () => {
     console.log("Signed out!!")
-    signOut({callbackUrl:"http://localhost:3000"})
+    signOut({callbackUrl:process.env.NEXT_PUBLIC_AUTH_SIGNOUT_REDIRECT_URL})
   }
   return (
     <>
